@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о музеях</title>
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header style="background-color: #5A5560; color: #FAED26; text-align: center; padding: 20px;">
+        <h1>Информация о музеях</h1>
+    </header>
+
+    <nav class="footer-nav" style="background-color: #46344E; padding: 10px; text-align: center; position: fixed; bottom: 0; left: 0; width: 100%;">
+        <ul style="list-style-type: none; margin: 0; padding: 0;">
+            <li style="display: inline; margin-right: 20px;"><a href="index.html" style="text-decoration: none; color: #FAED26;">Главная</a></li>
+            <li style="display: inline; margin-right: 20px;"><a href="museums.html" style="text-decoration: none; color: #FAED26;">Музеи</a></li>
+            <li style="display: inline; margin-right: 20px;"><a href="about.html" style="text-decoration: none; color: #FAED26;">Об авторе</a></li>
+            <li style="display: inline; margin-right: 20px;"><a href="таблица которая везде плохо выглядит.html" style="text-decoration: none; color: #FAED26;">таблица</a></li>
+            <li style="display: inline; margin-right: 20px;"><a href="форма.html" style="text-decoration: none; color: #FAED26;">записаться в музей</a></li>
+        </ul>
+    </nav>
+
+    <main style="background-color: #9B786F; color: #FAED26; padding: 20px; text-align: center;">
+
+        <h2>Форма записи в музей</h2>
+
+        <form id="museumForm">
+            <label for="museumSelect" style="font-size: 18px;">Выберите музей:</label>
+            <select id="museumSelect" name="museum">
+                <option value="Эрмитаж">Эрмитаж</option>
+                <option value="Лувр">Лувр</option>
+                <option value="Метрополитен-музей искусств">Метрополитен-музей искусств</option>
+                <option value="Британский музей">Британский музей</option>
+                <option value="Музей Ватикана">Музей Ватикана</option>
+            </select>
+
+            <br>
+
+            <label for="email" style="font-size: 18px;">Введите вашу почту:</label>
+            <input type="email" id="email" name="email" required>
+
+            <br>
+
+            <label for="phone" style="font-size: 18px;">Введите ваш номер телефона:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <br>
+
+            <button type="button" onclick="submitForm()" style="font-size: 18px;">Записать</button>
+        </form>
+
+        <div id="confirmationMessage" style="display: none; margin-top: 20px; font-size: 18px;">
+            <p>Данные записаны!</p>
+        </div>
+
+        <script>
+            function submitForm() {
+                document.getElementById('confirmationMessage').style.display = 'block';
+            }
+        </script>
+
+    </main>
+
+    <footer style="background-color: #5A5560; color: #FAED26; text-align: right; padding: 40px;">
+        <p>&copy; 2023 Информация о музеях</p>
+    </footer>
+
+</body>
+</html>
